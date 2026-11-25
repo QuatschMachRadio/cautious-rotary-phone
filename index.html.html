@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quatsch - mach - Radio: Musik an. Alltag aus!">
+  <title>Quatsch - mach - Radio</title>
+  <style>
+    :root { --ink:#25164b; --pink:#ff4fa3; --blue:#36b8ef; --yellow:#ffd84d; --purple:#8054e8; }
+    * { box-sizing:border-box }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,sans-serif; color:var(--ink);
+      background:linear-gradient(135deg,#fff1f8,#edf8ff 48%,#fff9dd); }
+    header { padding:22px 6vw; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+    .brand { font-weight:950; letter-spacing:.04em; font-size:clamp(1.15rem,3vw,1.8rem); }
+    .brand span { color:var(--pink) }
+    nav { display:flex; gap:18px; flex-wrap:wrap }
+    nav a { color:var(--ink); text-decoration:none; font-weight:750 }
+    .hero { margin:12px auto 28px; width:min(1120px,90%); padding:clamp(28px,6vw,64px);
+      border-radius:30px; color:white; text-align:center;
+      background:radial-gradient(circle at 15% 20%,#ff8ac4,transparent 30%),
+      radial-gradient(circle at 85% 15%,#65d7ff,transparent 32%),
+      linear-gradient(120deg,#6737c9,#a54ee8 55%,#f04f9d); box-shadow:0 18px 50px #6d42a533; }
+    .eyebrow { font-weight:800; letter-spacing:.16em; text-transform:uppercase; opacity:.9 }
+    h1 { font-size:clamp(2.2rem,7vw,5rem); line-height:1.02; margin:14px 0 }
+    .hero p { font-size:clamp(1rem,2.5vw,1.25rem); max-width:650px; margin:0 auto 24px }
+    .pill { display:inline-block; padding:12px 22px; background:var(--yellow); color:#3a245c;
+      border-radius:999px; font-weight:900; text-decoration:none }
+    main { width:min(1050px,90%); margin:0 auto 60px }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:22px }
+    .card { background:#fff; padding:25px; border-radius:24px; box-shadow:0 12px 35px #45266b12 }
+    h2 { margin:0 0 10px; font-size:1.55rem }
+    .tag { font-size:.78rem; text-transform:uppercase; letter-spacing:.12em; font-weight:900; color:var(--purple) }
+    .player { margin-top:18px; padding:20px; border-radius:18px; background:#f1eaff; text-align:center }
+    .play { border:0; border-radius:50%; width:58px; height:58px; font-size:1.35rem;
+      background:var(--pink); color:#fff; cursor:pointer }
+    .muted { color:#665d78; font-size:.94rem }
+    .chatbox { background:#f7f3ff; border-radius:16px; padding:15px; min-height:112px }
+    .chatbox p { margin:5px 0 10px }
+    .notice { background:#fff6d8; border-left:5px solid var(--yellow); padding:13px 15px; border-radius:10px; margin-top:14px }
+    footer { text-align:center; padding:25px; color:#665d78 }
+    a:focus,button:focus { outline:3px solid #222; outline-offset:3px }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">🎙️ QUATSCH <span>- MACH -</span> RADIO</div>
+    <nav aria-label="Hauptnavigation">
+      <a href="#radio">Radio</a><a href="#funchat">FunChat</a><a href="#regeln">Chat-Regeln</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Dein Radio · Deine Community</div>
+    <h1>Musik an.<br>Alltag aus!</h1>
+    <p>Willkommen bei Quatsch - mach - Radio. Hier gibt’s gute Laune und Musik bunt gemischt.</p>
+    <a class="pill" href="#radio">Zum Radio ↓</a>
+  </section>
+
+  <main>
+    <div class="grid">
+      <section class="card" id="radio">
+        <div class="tag">🎶 Rund um die Uhr gute Laune</div>
+        <h2>Unser Radio</h2>
+        <p class="muted">Hier kommt später dein echter Webradio-Stream rein.</p>
+        <div class="player">
+          <div style="font-size:2rem">📻</div>
+          <strong>Quatsch - mach - Radio</strong>
+          <p class="muted">Radio-Stream noch nicht verbunden</p>
+          <button class="play" type="button" aria-label="Radio-Player – noch nicht verbunden" disabled>▶</button>
+          <p class="muted">Sobald die Stream-Adresse eingetragen ist, kann hier Musik abgespielt werden.</p>
+        </div>
+      </section>
+
+      <section class="card" id="funchat">
+        <div class="tag">💬 Gemeinsam quatschen</div>
+        <h2>Der öffentliche FunChat</h2>
+        <div class="chatbox">
+          <strong>Der Chat kommt als Nächstes!</strong>
+          <p class="muted">Dieser Bereich ist zunächst eine Vorschau. Es werden noch keine Nachrichten übertragen oder gespeichert.</p>
+        </div>
+        <div class="notice"><strong>Wichtig:</strong> Der Chat wird erst nach Einrichtung von Moderation und Schutzregeln freigeschaltet.</div>
+      </section>
+    </div>
+
+    <section class="card" id="regeln" style="margin-top:22px">
+      <div class="tag">🛡️ Freundlich bleiben</div>
+      <h2>Unsere Chat-Regeln</h2>
+      <ul>
+        <li>Seid freundlich und respektvoll.</li>
+        <li>Keine Beleidigungen, Drohungen oder Belästigung.</li>
+        <li>Keine privaten Daten teilen – zum Beispiel Adresse, Telefonnummer, Schule oder Passwörter.</li>
+        <li>Keine Fotos oder Kontaktdaten anderer Personen ohne deren Erlaubnis veröffentlichen.</li>
+        <li>Bei Problemen an die Moderation wenden.</li>
+      </ul>
+      <p class="muted">Ein öffentlicher Chat braucht aktive Moderation. Er sollte nicht anonym und unbeaufsichtigt gestartet werden.</p>
+    </section>
+  </main>
+
+  <footer>© Quatsch - mach - Radio · Eine freundliche Community</footer>
+</body>
+</html>
